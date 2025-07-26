@@ -21,13 +21,13 @@ public class PostService {
     // Spring Boot는 자동으로 WebClient.Builder 빈을 제공합니다.
     public PostService(PostRepository postRepository, WebClient.Builder webClientBuilder) {
         this.postRepository = postRepository;
-        this.webClient = webClientBuilder.baseUrl("http://localhost:8000") // 기본 URL 설정
+        this.webClient = webClientBuilder.baseUrl("https://6fc192b59420.ngrok-free.app") // 기본 URL 설정
                 .build();
     }
 
     public PostEntity save(FormDto formDto) {
         // 1. 외부 API로 POST 요청을 보낼 요청 DTO 생성
-        AnalyzeRequest analyzeRequest = new AnalyzeRequest(formDto.getUrl());
+        AnalyzeRequest analyzeRequest = new AnalyzeRequest(formDto.getContent());
 
         // 2. WebClient를 사용하여 POST 요청 실행
         // Mono<ApiResponse>는 비동기적으로 ApiResponse를 반환할 것임을 의미합니다.
