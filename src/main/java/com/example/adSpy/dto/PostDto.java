@@ -27,7 +27,7 @@ public class PostDto {
                 .category(category)
                 .isAd(isAd)
                 .backAdPercentage(backAdPercentage)
-                .adProbability(adProbability) // 여기도 backAdPercentage가 아니라 adProbability가 맞을듯
+                .adProbability(adProbability)
                 .adUrls(adUrls)
                 .comment(comment)
                 .build();

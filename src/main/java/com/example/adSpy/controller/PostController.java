@@ -1,6 +1,7 @@
 package com.example.adSpy.controller;
 
 import com.example.adSpy.dto.FormDto;
+import com.example.adSpy.dto.GetFormDto;
 import com.example.adSpy.dto.PostDto;
 import com.example.adSpy.entity.PostEntity;
 import com.example.adSpy.service.PostService;
